@@ -91,7 +91,8 @@
 												<span class="dt-checkbox-label"></span>
 											</div>
 										</th>
-										<th class="table-plus">Name</th>
+										<%--<th class="table-plus datatable-nosort">Name</th>--%>
+										<th class="table-plus ">Name</th>
 										<th>Age</th>
 										<th>Office</th>
 										<th>Address</th>

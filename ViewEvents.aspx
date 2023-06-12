@@ -61,7 +61,7 @@
                                     <thead>
                                         <tr>
                                             <th>
-                                                <div class="dt-checkbox">
+                                                <div class="dt-checkbox datatable-nosort">
                                                     <input
                                                         type="checkbox"
                                                         name="select_all"
@@ -70,7 +70,7 @@
                                                     <span class="dt-checkbox-label"></span>
                                                 </div>
                                             </th>
-                                            <th class="table-plus datatable-nosort">Name</th>
+                                            <th class="table-plus">Name</th>
                                             <th>Age</th>
                                             <th>Office</th>
                                             <th>Address</th>
