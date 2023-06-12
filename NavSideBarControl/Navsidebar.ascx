@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NavSideBar.aspx.cs" Inherits="NavSideBarControl.NavSideBar" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Navsidebar.ascx.cs" Inherits="NavSideBarControl.Navsidebar" %>
 
 <!DOCTYPE html>
 <html>

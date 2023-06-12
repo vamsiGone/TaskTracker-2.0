@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace NavSideBarControl
 {
-    public partial class NavSideBar : System.Web.UI.Page
+    public partial class Navsidebar : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

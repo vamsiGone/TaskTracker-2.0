@@ -67,16 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NavSideBar.aspx" />
+    <Content Include="Navsidebar.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NavSideBar.aspx.cs">
-      <DependentUpon>NavSideBar.aspx</DependentUpon>
+    <Compile Include="Navsidebar.ascx.cs">
+      <DependentUpon>Navsidebar.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NavSideBar.aspx.designer.cs">
-      <DependentUpon>NavSideBar.aspx</DependentUpon>
+    <Compile Include="Navsidebar.ascx.designer.cs">
+      <DependentUpon>Navsidebar.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

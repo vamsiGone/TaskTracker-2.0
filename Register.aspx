@@ -312,7 +312,7 @@
                     // If backspace is pressed and input value is empty
                     var prevInput = $(this).prev('input');
                     prevInput.focus();
-                } else if (keyCode >= 48 && keyCode <= 57) {
+                } else if ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 96 && keyCode <= 105)) {
                     // If a number key is pressed
                     var maxLength = 1;
                     if ($(this).val().length === maxLength) {

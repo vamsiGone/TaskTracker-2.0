@@ -1,15 +1,17 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="TaskTracker_2._0.Dashboard" %>
 
+<%@ Register Src="~/NavSideBarControl/Navsidebar.ascx" TagPrefix="uc1" TagName="Top" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Dashboard</title>
 </head>
 <body>
+    <uc1:Top runat="server" id="Top" />
     <form id="form1" runat="server">
         <div>
-
             <div class="main-container">
                 <div class="pd-ltr-20">
                     <div class="card-box pd-20 height-100-p mb-30">
