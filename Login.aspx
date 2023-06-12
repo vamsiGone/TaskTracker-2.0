@@ -178,12 +178,12 @@
 											use code for form submit
 											<input class="btn btn-primary btn-lg btn-block" type="submit" value="Sign In">
 										-->
-											<%--<a
+											<a
 												class="btn btn-primary btn-lg btn-block"
-												href="index.html"
+												href="Dashboard.aspx"
 												>Sign In</a
-											>--%>
-											<asp:Button ID="SignIn" runat="server" class="btn btn-primary btn-lg btn-block" Text="Sign In" />
+											>
+<%--											<asp:Button ID="SignIn" runat="server" class="btn btn-primary btn-lg btn-block" Text="Sign In" />--%>
 										</div>
 										<div
 											class="font-16 weight-600 pt-10 pb-10 text-center"

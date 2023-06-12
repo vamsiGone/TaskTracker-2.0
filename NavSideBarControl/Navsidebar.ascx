@@ -95,7 +95,7 @@
     </script>
     <!-- End Google Tag Manager -->
 </head>
-<body>
+<body class="body">
     <%--<div class="pre-loader">
 			<div class="pre-loader-box">
 				<div class="loader-logo">
@@ -174,11 +174,11 @@
                 <div class="sidebar-btn-group pb-30 mb-10">
                     <a
                         href="javascript:void(0);"
-                        class="btn btn-outline-primary sidebar-light">White</a>
+                        class="btn btn-outline-primary sidebar-light active">White</a>
                     <a
                         href="javascript:void(0);"
-                        class="btn btn-outline-primary sidebar-dark active">Dark</a>
-                </div>
+                        class="btn btn-outline-primary sidebar-dark ">Dark</a>
+                </div>               
                 <div class="reset-options pt-30 text-center">
                     <button class="btn btn-danger" id="reset-settings">
                         Reset Settings

@@ -1,10 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewTasks.aspx.cs" Inherits="TaskTracker_2._0.ViewTasks" %>
 <%@ Register Src="~/NavSideBarControl/Navsidebar.ascx" TagPrefix="uc1" TagName="Top" %>
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>View Tasks</title>
 	<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
 		<link
@@ -72,7 +71,7 @@
 					<!-- Export Datatable start -->
 					<div class="card-box mb-30">
 						<div class="pd-20">
-							<h4 class="text-blue h4">Data Table with Export Buttons</h4>
+							<h4 class="text-blue h4">View Tasks</h4>
 						</div>
 						<div class="pb-20">
 							<table
@@ -169,15 +168,7 @@
 		
         </div>
     </form>
-	<!-- js -->
-		<script src="vendors/scripts/core.js"></script>
-		<script src="vendors/scripts/script.min.js"></script>
-		<script src="vendors/scripts/process.js"></script>
-		<script src="vendors/scripts/layout-settings.js"></script>
-		<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-		<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-		<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-		<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+
 		<!-- buttons for Export datatable -->
 		<script src="src/plugins/datatables/js/dataTables.buttons.min.js"></script>
 		<script src="src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
