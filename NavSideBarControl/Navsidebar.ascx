@@ -200,7 +200,7 @@
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li>
-                        <a href="sitemap.html" class="dropdown-toggle no-arrow">
+                        <a href="Dashboard.aspx" class="dropdown-toggle no-arrow">
                             <span class="micon bi bi-diagram-3"></span><span class="mtext">Dashboard</span>
                         </a>
                     </li>
@@ -208,7 +208,7 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a href="sitemap.html" class="dropdown-toggle no-arrow">
+                        <a href="AddTaskEvent.aspx" class="dropdown-toggle no-arrow">
                             <span class="micon bi bi-diagram-3"></span><span class="mtext">Task / Event</span>
                         </a>
                     </li>
@@ -216,7 +216,7 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a href="chat.html" class="dropdown-toggle no-arrow">
+                        <a href="ViewTasks.aspx" class="dropdown-toggle no-arrow">
                             <span class="micon bi bi-chat-right-dots"></span><span class="mtext">View Tasks</span>
                         </a>
                     </li>
@@ -224,7 +224,7 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a href="invoice.html" class="dropdown-toggle no-arrow">
+                        <a href="ViewEvents.aspx" class="dropdown-toggle no-arrow">
                             <span class="micon bi bi-receipt-cutoff"></span><span class="mtext">View Events</span>
                         </a>
                     </li>

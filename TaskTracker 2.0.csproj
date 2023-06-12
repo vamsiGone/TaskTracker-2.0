@@ -64,12 +64,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddTaskEvent.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="ViewEvents.aspx" />
+    <Content Include="ViewTasks.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTaskEvent.aspx.cs">
+      <DependentUpon>AddTaskEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTaskEvent.aspx.designer.cs">
+      <DependentUpon>AddTaskEvent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -91,6 +101,20 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEvents.aspx.cs">
+      <DependentUpon>ViewEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEvents.aspx.designer.cs">
+      <DependentUpon>ViewEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTasks.aspx.cs">
+      <DependentUpon>ViewTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTasks.aspx.designer.cs">
+      <DependentUpon>ViewTasks.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
