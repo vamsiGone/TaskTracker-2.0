@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
 </head>
 <body>
+
+    <!-- events add and display will done in jquery check calender-setting.js for more clarity -->
     <uc1:Top runat="server" ID="Top" />
 
     <form id="form1" runat="server">
@@ -38,7 +40,7 @@
                                                 <a href="Dashboard.aspx">Home</a>
                                             </li>
                                             <li class="breadcrumb-item active" aria-current="page">Task / Event
-										</li>
+                                            </li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -81,35 +83,60 @@
 
                                         <div class="modal-body">
                                             <h4 class="text-blue h4 mb-10">Add Event Detail</h4>
+                                            <div class="form-group row align-items-center">
+                                                <label class="col-sm-4 col-form-label">Select<br /> Event / Task</label>
+                                                <div class="col-sm-8">
+                                                    <div
+                                                        class="custom-control custom-radio custom-control-inline pb-0">
+                                                        <input
+                                                            type="radio"
+                                                            id="task"
+                                                            name="addtask"
+                                                            class="custom-control-input" />
+                                                        <label class="custom-control-label" for="task">
+                                                            Task</label>
+                                                    </div>
+                                                    <div
+                                                        class="custom-control custom-radio custom-control-inline pb-0">
+                                                        <input
+                                                            type="radio"
+                                                            id="event"
+                                                            name="addtask"
+                                                            class="custom-control-input" />
+                                                        <label class="custom-control-label" for="event">
+                                                            Event</label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="form-group">
-                                                <label>Event name</label>
+                                                <label>Event / Task name</label>
                                                 <input type="text" class="form-control" name="ename" />
                                             </div>
                                             <div class="form-group">
-                                                <label>Event Date</label>
+                                                <label>Event / Task Date</label>
                                                 <input
                                                     type="text"
                                                     class="datetimepicker form-control"
                                                     name="edate" />
                                             </div>
                                             <div class="form-group">
-                                                <label>Event Description</label>
+                                                <label>Event / Task Description</label>
                                                 <textarea class="form-control" name="edesc"></textarea>
                                             </div>
                                             <div class="form-group">
-                                                <label>Event Color</label>
+                                                <label>Event / Task Color</label>
                                                 <select class="form-control" name="ecolor">
                                                     <option value="fc-bg-default">fc-bg-default</option>
                                                     <option value="fc-bg-blue">fc-bg-blue</option>
                                                     <option value="fc-bg-lightgreen">fc-bg-lightgreen
-													</option>
+                                                    </option>
                                                     <option value="fc-bg-pinkred">fc-bg-pinkred</option>
                                                     <option value="fc-bg-deepskyblue">fc-bg-deepskyblue
-													</option>
+                                                    </option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <label>Event Icon</label>
+                                                <label>Event / Task Icon</label>
                                                 <select class="form-control" name="eicon">
                                                     <option value="circle">circle</option>
                                                     <option value="cog">cog</option>
@@ -138,13 +165,13 @@
                             </div>
                         </div>
                     </div>
-               
+
                 </div>
             </div>
         </div>
     </form>
     <!-- js -->
-    
+
     <script src="src/plugins/fullcalendar/fullcalendar.min.js"></script>
     <script src="vendors/scripts/calendar-setting.js"></script>
 

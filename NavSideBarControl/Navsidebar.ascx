@@ -170,7 +170,7 @@
                     </li>
                     <li>
                         <a href="Dashboard.aspx" class="dropdown-toggle no-arrow">
-                            <span class="micon bi bi-diagram-3"></span><span class="mtext">Dashboard</span>
+                            <span class="micon bi bi-layout-text-window-reverse""></span><span class="mtext">Dashboard</span>
                         </a>
                     </li>
                     <li>
@@ -178,7 +178,7 @@
                     </li>
                     <li>
                         <a href="AddTaskEvent.aspx" class="dropdown-toggle no-arrow">
-                            <span class="micon bi bi-diagram-3"></span><span class="mtext">Task / Event</span>
+                            <span class="micon bi bi-patch-plus"></span><span class="mtext">Task / Event</span>
                         </a>
                     </li>
                     <li>
