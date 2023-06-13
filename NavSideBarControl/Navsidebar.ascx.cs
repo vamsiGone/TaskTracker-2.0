@@ -11,6 +11,7 @@ namespace NavSideBarControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["checkmode"] = Request.Form["Theme"];
 
         }
     }

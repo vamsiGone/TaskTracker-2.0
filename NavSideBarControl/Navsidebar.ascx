@@ -130,7 +130,7 @@
                 <input id="Theme"
                     type="checkbox"                   
                     class="switch-btn"
-                    data-color="#000000"/>&nbsp;<span id="ThemeMode" class="text-dark">Light</span>&nbsp;&nbsp;
+                    data-color="#FFFFFF"/>&nbsp;<span id="ThemeMode" class="text-dark">Light</span>&nbsp;&nbsp;
             </div>         
             <div class="user-info-dropdown">
                 <div class="dropdown">
