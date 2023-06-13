@@ -42,11 +42,18 @@
         rel="stylesheet"
         type="text/css"
         href="src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+    <!-- switchery css -->
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="src/plugins/switchery/switchery.min.css" />
     <link
         rel="stylesheet"
         type="text/css"
         href="src/plugins/datatables/css/responsive.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+    <!--js-->
+    <script src="src/scripts/jquery.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -67,7 +74,31 @@
                     $(this).addClass("active"); // Add the "active" class to the matching li tag
                 }
             });
+
+            function ThemeMode() {
+                if ($('#Theme').is(':checked')) {
+                    // Checkbox is checked, apply dark theme
+                    $('#header_dark').click();
+                    $('#sidebar_dark').click();
+                    $("#ThemeMode").removeClass('text-dark');
+                    $("#ThemeMode").addClass('text-white');
+                    $("#ThemeMode").text("Dark");
+                } else {
+                    // Checkbox is unchecked, apply light theme
+
+                    $('#header_white').click();
+                    $('#sidebar_white').click();
+                    $("#ThemeMode").removeClass('text-white');
+                    $("#ThemeMode").addClass('text-dark');
+                    $("#ThemeMode").text("Light");
+                }
+            }
+            ThemeMode();
+            $('#Theme').change(function () {
+                ThemeMode();
+            });
         });
+
 
     </script>
 
@@ -116,6 +147,12 @@
         </div>
         <div class="header-right">
             <div class="dashboard-setting user-notification">
+                <input id="Theme"
+                    type="checkbox"                   
+                    class="switch-btn"
+                    data-color="#000000"/>&nbsp;<span id="ThemeMode" class="text-dark">Light</span>&nbsp;&nbsp;
+            </div>
+            <%--<div class="dashboard-setting user-notification">
                 <div class="dropdown">
                     <a
                         class="dropdown-toggle no-arrow"
@@ -124,7 +161,7 @@
                         <i class="dw dw-settings2"></i>
                     </a>
                 </div>
-            </div>
+            </div>--%>
             <div class="user-info-dropdown">
                 <div class="dropdown">
                     <a
@@ -162,28 +199,24 @@
             <div class="right-sidebar-body-content">
                 <h4 class="weight-600 font-18 pb-10">Header Background</h4>
                 <div class="sidebar-btn-group pb-30 mb-10">
-                    <a
+                    <a id="header_white"
                         href="javascript:void(0);"
                         class="btn btn-outline-primary header-white active">White</a>
-                    <a
+                    <a id="header_dark"
                         href="javascript:void(0);"
                         class="btn btn-outline-primary header-dark">Dark</a>
                 </div>
 
-                <h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
+               
                 <div class="sidebar-btn-group pb-30 mb-10">
-                    <a
+                    <a id="sidebar_white"
                         href="javascript:void(0);"
                         class="btn btn-outline-primary sidebar-light active">White</a>
-                    <a
+                    <a id="sidebar_dark"
                         href="javascript:void(0);"
                         class="btn btn-outline-primary sidebar-dark ">Dark</a>
-                </div>               
-                <div class="reset-options pt-30 text-center">
-                    <button class="btn btn-danger" id="reset-settings">
-                        Reset Settings
-                    </button>
                 </div>
+            
             </div>
         </div>
     </div>
@@ -238,6 +271,7 @@
     <div class="mobile-menu-overlay"></div>
 
 
+
     <!-- js -->
     <script src="vendors/scripts/core.js"></script>
     <script src="vendors/scripts/script.min.js"></script>
@@ -249,6 +283,11 @@
     <script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
     <script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
     <script src="vendors/scripts/dashboard.js"></script>
+
+    <!-- switchery js -->
+    <script src="src/plugins/switchery/switchery.min.js"></script>
+    <script src="vendors/scripts/advanced-components.js"></script>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe

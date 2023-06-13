@@ -160,11 +160,11 @@
                                                       
                                                     </div>
                                                     <div class="mt-4">
-                                                        <asp:Button ID="OTPsubmit" class="btn btn-danger px-4 validate" runat="server" Text="Validate" />                                                       
+                                                        <asp:Button ID="OTPsubmit" class="btn btn-success px-4 validate" runat="server" Text="Verify OTP" />                                                       
                                                     </div>
                                                 </div>
-                                                <div class="card-2">
-                                                    <div class="content d-flex justify-content-center align-items-center"><span>Didn't get the code</span> <a href="#" class="text-decoration-none ms-3">Resend(1/3)</a> </div>
+                                                <div class="card-2"><br />
+                                                    <div class="content d-flex justify-content-between align-items-center"><span>Didn't get the code?</span> <asp:Button ID="ResendOTP" class="btn btn-danger px-3 validate" runat="server" Text="Resend OTP" />   </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -321,6 +321,16 @@
                         nextInput.focus();
                     }
                 }
+                $('.inputs input').keyup(function (e) {
+                    if (keyCode === 8 && !$(this).val()) {
+                        // If backspace is pressed and input value is empty
+                        var prevInput = $(this).prev('input');
+                        prevInput.focus();
+                    } else {
+                        var nextInput = $(this).next('input');
+                        nextInput.focus();
+                    }
+                });
             });
            
 

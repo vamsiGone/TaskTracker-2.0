@@ -114,6 +114,15 @@ namespace TaskTracker_2._0
         protected global::System.Web.UI.WebControls.Button OTPsubmit;
 
         /// <summary>
+        /// ResendOTP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ResendOTP;
+
+        /// <summary>
         /// FileUpload1 control.
         /// </summary>
         /// <remarks>
