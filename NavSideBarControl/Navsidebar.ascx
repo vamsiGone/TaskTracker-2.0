@@ -75,28 +75,8 @@
                 }
             });
 
-            function ThemeMode() {
-                if ($('#Theme').is(':checked')) {
-                    // Checkbox is checked, apply dark theme
-                    $('#header_dark').click();
-                    $('#sidebar_dark').click();
-                    $("#ThemeMode").removeClass('text-dark');
-                    $("#ThemeMode").addClass('text-white');
-                    $("#ThemeMode").text("Dark");
-                } else {
-                    // Checkbox is unchecked, apply light theme
+          
 
-                    $('#header_white').click();
-                    $('#sidebar_white').click();
-                    $("#ThemeMode").removeClass('text-white');
-                    $("#ThemeMode").addClass('text-dark');
-                    $("#ThemeMode").text("Light");
-                }
-            }
-            ThemeMode();
-            $('#Theme').change(function () {
-                ThemeMode();
-            });
         });
 
 
@@ -126,7 +106,7 @@
     </script>
     <!-- End Google Tag Manager -->
 </head>
-<body class="body">
+<body id="Body">
     <%--<div class="pre-loader">
 			<div class="pre-loader-box">
 				<div class="loader-logo">
@@ -143,7 +123,7 @@
     <div class="header">
         <div class="header-left">
             <div class="menu-icon bi bi-list"></div>
-
+            <h2 id="AppName" class="text-dark">Task Tracker</h2>
         </div>
         <div class="header-right">
             <div class="dashboard-setting user-notification">
@@ -151,17 +131,7 @@
                     type="checkbox"                   
                     class="switch-btn"
                     data-color="#000000"/>&nbsp;<span id="ThemeMode" class="text-dark">Light</span>&nbsp;&nbsp;
-            </div>
-            <%--<div class="dashboard-setting user-notification">
-                <div class="dropdown">
-                    <a
-                        class="dropdown-toggle no-arrow"
-                        href="javascript:;"
-                        data-toggle="right-sidebar">
-                        <i class="dw dw-settings2"></i>
-                    </a>
-                </div>
-            </div>--%>
+            </div>         
             <div class="user-info-dropdown">
                 <div class="dropdown">
                     <a
@@ -176,54 +146,17 @@
                     </a>
                     <div
                         class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                        <a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i>Profile</a>
-                        <a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i>Setting</a>
+                        <a class="dropdown-item" href="Profile.aspx"><i class="dw dw-user1"></i>Profile</a>                        
                         <a class="dropdown-item" href="Login.aspx"><i class="dw dw-logout"></i>Log Out</a>
                     </div>
                 </div>
             </div>
 
         </div>
-    </div>
-
-    <div class="right-sidebar">
-        <div class="sidebar-title">
-            <h3 class="weight-600 font-16 text-blue">Layout Settings
-					<span class="btn-block font-weight-400 font-12">User Interface Settings</span>
-            </h3>
-            <div class="close-sidebar" data-toggle="right-sidebar-close">
-                <i class="icon-copy ion-close-round"></i>
-            </div>
-        </div>
-        <div class="right-sidebar-body customscroll">
-            <div class="right-sidebar-body-content">
-                <h4 class="weight-600 font-18 pb-10">Header Background</h4>
-                <div class="sidebar-btn-group pb-30 mb-10">
-                    <a id="header_white"
-                        href="javascript:void(0);"
-                        class="btn btn-outline-primary header-white active">White</a>
-                    <a id="header_dark"
-                        href="javascript:void(0);"
-                        class="btn btn-outline-primary header-dark">Dark</a>
-                </div>
-
-               
-                <div class="sidebar-btn-group pb-30 mb-10">
-                    <a id="sidebar_white"
-                        href="javascript:void(0);"
-                        class="btn btn-outline-primary sidebar-light active">White</a>
-                    <a id="sidebar_dark"
-                        href="javascript:void(0);"
-                        class="btn btn-outline-primary sidebar-dark ">Dark</a>
-                </div>
-            
-            </div>
-        </div>
-    </div>
-
+    </div>  
     <div class="left-side-bar">
         <div class="brand-logo">
-            <img src="vendors/images/Task Tracker.svg" alt="" style="width: 293px; height: 62px;" class="light-logo" />
+          <%--  <img src="vendors/images/Task Tracker.svg" alt="" style="width: 293px; height: 62px;" class="light-logo" />--%>
 
             <div class="close-sidebar" data-toggle="left-sidebar-close">
                 <i class="ion-close-round"></i>
@@ -232,6 +165,9 @@
         <div class="menu-block customscroll">
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
+                     <li>
+                        <div class="dropdown-divider"></div>
+                    </li>
                     <li>
                         <a href="Dashboard.aspx" class="dropdown-toggle no-arrow">
                             <span class="micon bi bi-diagram-3"></span><span class="mtext">Dashboard</span>
@@ -289,6 +225,41 @@
     <script src="vendors/scripts/advanced-components.js"></script>
 
     <!-- Google Tag Manager (noscript) -->
+
+    <script>
+        $(document).ready(function () {
+            function ThemeMode() {
+
+
+                if ($('#Theme').is(':checked')) {
+                    // Checkbox is checked, apply dark theme
+                    $("#Body").removeClass('header-white sidebar-light active');
+                    $("#Body").addClass('header-dark sidebar-dark active');
+                    $("#ThemeMode").removeClass('text-dark');
+                    $("#ThemeMode").addClass('text-white');
+                    $("#ThemeMode").text("Dark");
+                    $("#AppName").removeClass('text-dark');
+                    $("#AppName").addClass('text-white');
+                   
+
+                } else {
+                    // Checkbox is unchecked, apply light theme
+                    $("#Body").removeClass('header-dark sidebar-dark active');
+                    $("#Body").addClass('header-white sidebar-light active');
+                    $("#ThemeMode").removeClass('text-white');
+                    $("#ThemeMode").addClass('text-dark');
+                    $("#ThemeMode").text("Light");
+                    $("#AppName").removeClass('text-white');
+                    $("#AppName").addClass('text-dark');
+                    
+                }
+            }
+            ThemeMode();
+            $('#Theme').change(function () {
+                ThemeMode();
+            });
+        });
+    </script>
     <noscript>
         <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
