@@ -110,14 +110,14 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Event / Task name</label>
-                                                <input type="text" class="form-control" name="ename" />
+                                                <input type="text" class="form-control" name="ename" autocomplete="off"  />
                                             </div>
                                             <div class="form-group">
-                                                <label>Event / Task Date</label>
+                                                <label>Event / Task Date & Time</label>
                                                 <input
                                                     type="text"
                                                     class="datetimepicker form-control"
-                                                    name="edate" />
+                                                    name="edate" autocomplete="off" />
                                             </div>
                                             <div class="form-group">
                                                 <label>Event / Task Description</label>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTracker 2.0", "TaskTrac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavSideBarControl", "NavSideBarControl\NavSideBarControl.csproj", "{0F89CFC7-D1FE-4A7D-8847-DEF6AB8688D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminControl", "AdminControl\AdminControl.csproj", "{727A1BC3-610E-4D42-A86D-4866052508BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0F89CFC7-D1FE-4A7D-8847-DEF6AB8688D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F89CFC7-D1FE-4A7D-8847-DEF6AB8688D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F89CFC7-D1FE-4A7D-8847-DEF6AB8688D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{727A1BC3-610E-4D42-A86D-4866052508BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727A1BC3-610E-4D42-A86D-4866052508BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727A1BC3-610E-4D42-A86D-4866052508BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727A1BC3-610E-4D42-A86D-4866052508BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

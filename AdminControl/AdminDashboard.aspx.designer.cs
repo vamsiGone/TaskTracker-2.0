@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TaskTracker_2._0
+namespace AdminControl
 {
 
 
-    public partial class ViewEvents
+    public partial class AdminDashboard
     {
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace TaskTracker_2._0
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::NavSideBarControl.Navsidebar Top;
+        protected global::System.Web.UI.UserControl Top;
 
         /// <summary>
         /// form1 control.
@@ -31,14 +31,5 @@ namespace TaskTracker_2._0
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// MonthPicker control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MonthPicker;
     }
 }

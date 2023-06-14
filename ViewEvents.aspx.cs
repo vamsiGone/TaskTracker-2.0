@@ -11,7 +11,12 @@ namespace TaskTracker_2._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                DateTime currentDate = DateTime.Now;
+                string defaultMonthYear = currentDate.ToString("MMM yyyy");
+                MonthPicker.Text = defaultMonthYear;
+            }
         }
     }
 }
