@@ -1,13 +1,3 @@
-jQuery(document).ready(function () {
-	$("#add-event").submit(function () {
-		alert("Submitted");
-		var values = {};
-		$.each($("#add-event").serializeArray(), function (i, field) {
-			values[field.name] = field.value;
-		});
-		console.log(values);
-	});
-}); var data = {};
 
 
 //https://codepen.io/adamaoc/pen/NqQEPz check this to add the events like a variable check the js code 
@@ -55,8 +45,8 @@ jQuery(document).ready(function () {
 					title: "Team Meeting",
 					description:
 						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.",
-					start: "2022-07-10T13:00:00",
-					end: "2022-07-10T16:00:00",
+					start: "2023-06-10T13:00:00",
+					end: "2023-06-10T16:00:00",
 					className: "fc-bg-pinkred",
 					icon: "group",
 					allDay: false,
@@ -131,7 +121,7 @@ jQuery(document).ready(function () {
 						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.",
 					start: "2022-12-27",
 					end: "2022-12-27",
-					className: "fc-bg-default",
+					className: "fc-bg-lightgreen",
 					icon: "rocket",
 				},
 				{
