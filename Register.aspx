@@ -155,9 +155,7 @@
                                                         <asp:TextBox ID="Otp3" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
                                                         <asp:TextBox ID="Otp4" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
                                                         <asp:TextBox ID="Otp5" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
-                                                        <asp:TextBox ID="Otp6" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*" ></asp:TextBox>
-                                                                                                                                            
-                                                      
+                                                        <asp:TextBox ID="Otp6" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*" ></asp:TextBox>                                                      
                                                     </div>
                                                     <div class="mt-4">
                                                         <asp:Button ID="OTPsubmit" class="btn btn-success px-4 validate" runat="server" Text="Verify OTP" />                                                       
@@ -233,6 +231,7 @@
                                             <label class="custom-control-label" for="customCheck1">
                                                 I have read and agreed to the terms of services and
 													privacy policy</label>
+                                            <asp:Button ID="RegisterForm" runat="server" Text="Button" OnClick="RegisterForm_Click" Enabled="True" Visible="False" />
                                         </div>
                                     </div>
                                 </section>
@@ -244,6 +243,7 @@
         </div>
     </div>
     <!-- success Popup html Start -->
+    
     <button
         type="button"
         id="success-modal-btn"
@@ -332,9 +332,29 @@
                     }
                 });
             });
-           
+            function OTPValid() {
+                var otp1 = $('#Otp1').val();
+                var otp2 = $('#Otp2').val();
+                var otp3 = $('#Otp3').val();
+                var otp4 = $('#Otp4').val();
+                var otp5 = $('#Otp5').val();
+                var otp6 = $('#Otp6').val();
+                if (otp1 == "" || otp2 == "" || otp3 == "" || otp4 == "" || otp5 == "" || otp6 == "") {
+                    AlertMessage('error', 'Enter the 6-digit OTP', true);
+                    return false;
+                }
+            }
 
+            function Validation() {
+                var email = $('#Email').val();
+                var name = $('#UserName').val();
+                var password = $('#Password').val();
+                var password = $('#ConfirmPassword').val();
+                var otp = $('#Otp1').val() + $('#Otp2').val() + $('#Otp3').val() + $('#Otp4').val() + $('#Otp5').val() + $('#Otp6').val();
+                var photo=
+            }
         });
+
 
          
             

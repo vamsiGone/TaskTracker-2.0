@@ -72,6 +72,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="vendors\scripts\toaster.js" />
     <Content Include="ViewEvents.aspx" />
     <Content Include="ViewTasks.aspx" />
     <Content Include="Web.config" />
@@ -138,10 +139,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="BLL\BLL.csproj">
+      <Project>{05940be1-c647-4bf1-8d10-7b0887560124}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="NavSideBarControl\NavSideBarControl.csproj">
       <Project>{0f89cfc7-d1fe-4a7d-8847-def6ab8688d1}</Project>
       <Name>NavSideBarControl</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

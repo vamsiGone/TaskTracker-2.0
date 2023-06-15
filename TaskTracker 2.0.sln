@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTracker 2.0", "TaskTrac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavSideBarControl", "NavSideBarControl\NavSideBarControl.csproj", "{0F89CFC7-D1FE-4A7D-8847-DEF6AB8688D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{05940BE1-C647-4BF1-8D10-7B0887560124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLL", "DLL\DLL.csproj", "{DE48BD58-6641-4E6E-B283-FDCAA4251E09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{0F89CFC7-D1FE-4A7D-8847-DEF6AB8688D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F89CFC7-D1FE-4A7D-8847-DEF6AB8688D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F89CFC7-D1FE-4A7D-8847-DEF6AB8688D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05940BE1-C647-4BF1-8D10-7B0887560124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05940BE1-C647-4BF1-8D10-7B0887560124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05940BE1-C647-4BF1-8D10-7B0887560124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05940BE1-C647-4BF1-8D10-7B0887560124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE48BD58-6641-4E6E-B283-FDCAA4251E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE48BD58-6641-4E6E-B283-FDCAA4251E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE48BD58-6641-4E6E-B283-FDCAA4251E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE48BD58-6641-4E6E-B283-FDCAA4251E09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
