@@ -7,7 +7,8 @@ jQuery(document).ready(function () {
 		});
 		console.log(values);
 	});
-});
+}); var data = {};
+
 
 //https://codepen.io/adamaoc/pen/NqQEPz check this to add the events like a variable check the js code 
 (function () {
@@ -36,7 +37,7 @@ jQuery(document).ready(function () {
 					description:
 						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu pellentesque nibh. In nisl nulla, convallis ac nulla eget, pellentesque pellentesque magna.",
 					start: "2023-05-05",
-					end: "2023-05-05",
+					end: "2023-05-06",
 					className: "fc-bg-default",
 					icon: "circle",
 				},
