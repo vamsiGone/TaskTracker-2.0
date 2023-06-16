@@ -43,7 +43,7 @@
         type="text/css"
         href="src/plugins/jquery-steps/jquery.steps.css" />
     <link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
-
+     <script src="vendors/scripts/toaster.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
         async
@@ -103,138 +103,144 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="register-box bg-white box-shadow border-radius-10">
                         <div class="wizard-content">
-                            <form class="tab-wizard2 wizard-circle wizard" runat="server">
-                                <h5>Basic Account Credentials</h5>
-                                <section>
-                                    <div class="form-wrap max-width-600 mx-auto">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">
-                                                Email Address*</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox ID="Email" TextMode="Email" class="form-control" runat="server"></asp:TextBox>
-                                                <%--<input type="email" class="form-control" />--%>
+                            <form class="tab-wizard2 wizard-circle wizard" id="Register" runat="server">
+                               
+                                    <h5>Basic Account Credentials</h5>
+                                    <section>
+                                        <div class="form-wrap max-width-600 mx-auto">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">
+                                                    Email Address*</label>
+                                                <div class="col-sm-8">
+                                                    <asp:TextBox ID="Email" TextMode="Email" class="form-control" runat="server"></asp:TextBox>
+                                                    <%--<input type="email" class="form-control" />--%>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Username*</label>
+                                                <div class="col-sm-8">
+                                                    <asp:TextBox ID="UserName" class="form-control" runat="server"></asp:TextBox>
+                                                    <%--<input type="text" class="form-control" />--%>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Password*</label>
+                                                <div class="col-sm-8">
+                                                    <asp:TextBox ID="Password" TextMode="Password" class="form-control" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">
+                                                    Confirm Password*</label>
+                                                <div class="col-sm-8">
+                                                    <asp:TextBox ID="ConfirmPassword" TextMode="Password" class="form-control" runat="server"></asp:TextBox>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Username*</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox ID="UserName" class="form-control" runat="server"></asp:TextBox>
-                                                <%--<input type="text" class="form-control" />--%>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">Password*</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox ID="Password" TextMode="Password" class="form-control" runat="server"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">
-                                                Confirm Password*</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox ID="ConfirmPassword" TextMode="Password" class="form-control" runat="server"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <!-- Step 2 -->
-                             <!--https://bbbootstrap.com/snippets/bootstrap-5-verify-otp-validation-form-inputs-78878858-->
-                                <h5>Verify OTP</h5>
-                                <section>
-                                    <div class="form-wrap max-width-600 mx-auto">
-                                        <div class="container height-100 d-flex justify-content-center align-items-center">
-                                            <div class="position-relative">
-                                                <div class="card p-2 text-center">
-                                                    <h6>Please enter the one time password
+                                    </section>
+
+                                    <!-- Step 2 -->
+                                    <!--https://bbbootstrap.com/snippets/bootstrap-5-verify-otp-validation-form-inputs-78878858-->
+                                    <h5>Verify OTP</h5>
+                                    <section>
+                                        <div class="form-wrap max-width-600 mx-auto">
+                                            <div class="container height-100 d-flex justify-content-center align-items-center">
+                                                <div class="position-relative">
+                                                    <div class="card p-2 text-center">
+                                                        <h6>Please enter the one time password
                                                         <br>
-                                                        to verify your account</h6>
-                                                    <div><span>A code has been sent to</span> <small>*******9897</small> </div>
-                                                    <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2"> 
-                                                        <asp:TextBox ID="Otp1" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
-                                                        <asp:TextBox ID="Otp2" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
-                                                        <asp:TextBox ID="Otp3" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
-                                                        <asp:TextBox ID="Otp4" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
-                                                        <asp:TextBox ID="Otp5" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
-                                                        <asp:TextBox ID="Otp6" class="m-2 text-center form-control rounded"  runat="server" MaxLength="1" placeholder="*" ></asp:TextBox>                                                      
+                                                            to verify your account</h6>
+                                                        <div><span>A code has been sent to</span> <small>*******9897</small> </div>
+                                                        <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+                                                            <asp:TextBox ID="Otp1" class="m-2 text-center form-control rounded" runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
+                                                            <asp:TextBox ID="Otp2" class="m-2 text-center form-control rounded" runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
+                                                            <asp:TextBox ID="Otp3" class="m-2 text-center form-control rounded" runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
+                                                            <asp:TextBox ID="Otp4" class="m-2 text-center form-control rounded" runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
+                                                            <asp:TextBox ID="Otp5" class="m-2 text-center form-control rounded" runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
+                                                            <asp:TextBox ID="Otp6" class="m-2 text-center form-control rounded" runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
+                                                        </div>
+                                                        <div class="mt-4">
+                                                            <asp:Button ID="OTPsubmit" class="btn btn-success px-4 validate" runat="server" Text="Verify OTP"/>
+                                                        </div>
                                                     </div>
-                                                    <div class="mt-4">
-                                                        <asp:Button ID="OTPsubmit" class="btn btn-success px-4 validate" runat="server" Text="Verify OTP" />                                                       
+                                                    <div class="card-2">
+                                                        <br />
+                                                        <div class="content d-flex justify-content-between align-items-center">
+                                                            <span>Didn't get the code?</span>
+                                                            <asp:Button ID="ResendOTP" class="btn btn-danger px-3 validate" runat="server" Text="Resend OTP" />
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="card-2"><br />
-                                                    <div class="content d-flex justify-content-between align-items-center"><span>Didn't get the code?</span> <asp:Button ID="ResendOTP" class="btn btn-danger px-3 validate" runat="server" Text="Resend OTP" />   </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </section>
-                                <!-- Step 3 -->
-                                <h5>Personal Information</h5>
-                                <section>
-                                    <div class="form-wrap max-width-600 mx-auto">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 col-form-label">
-                                                Profile Photo*</label>
-                                            <div class="col-sm-8">
-                                                <asp:FileUpload ID="FileUpload1" runat="server" />
+                                    </section>
+                                    <!-- Step 3 -->
+                                    <h5>Personal Information</h5>
+                                    <section>
+                                        <div class="form-wrap max-width-600 mx-auto">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">
+                                                    Profile Photo*</label>
+                                                <div class="col-sm-8">
+                                                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row align-items-center">
-                                            <asp:Image runat="server" ID="PreviewImage" Width="200" Height="200" Style="margin-left: 95px;" />
+                                            <div class="form-group row align-items-center">
+                                                <asp:Image runat="server" ID="PreviewImage" Width="200" Height="200" Style="margin-left: 95px;" />
+
+                                            </div>
 
                                         </div>
+                                    </section>
 
-                                    </div>
-                                </section>
-
-                                <!-- Step 4 -->
-                                <h5>Overview Information</h5>
-                                <section>
-                                    <div class="form-wrap max-width-600 mx-auto">
-                                        <ul class="register-info">
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Email Address</div>
-                                                    <div class="col-sm-8">example@abc.com</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Username</div>
-                                                    <div class="col-sm-8">Example</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Password</div>
-                                                    <div class="col-sm-8">.....000</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Full Name</div>
-                                                    <div class="col-sm-8">john smith</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-sm-4 weight-600">Location</div>
-                                                    <div class="col-sm-8">123 Example</div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="custom-control custom-checkbox mt-4">
-                                            <input
-                                                type="checkbox"
-                                                class="custom-control-input"
-                                                id="customCheck1" />
-                                            <label class="custom-control-label" for="customCheck1">
-                                                I have read and agreed to the terms of services and
+                                    <!-- Step 4 -->
+                                    <h5>Overview Information</h5>
+                                    <section>
+                                        <div class="form-wrap max-width-600 mx-auto">
+                                            <ul class="register-info">
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-sm-4 weight-600">Email Address</div>
+                                                        <div class="col-sm-8">example@abc.com</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-sm-4 weight-600">Username</div>
+                                                        <div class="col-sm-8">Example</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-sm-4 weight-600">Password</div>
+                                                        <div class="col-sm-8">.....000</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-sm-4 weight-600">Full Name</div>
+                                                        <div class="col-sm-8">john smith</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-sm-4 weight-600">Location</div>
+                                                        <div class="col-sm-8">123 Example</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="custom-control custom-checkbox mt-4">
+                                                <input
+                                                    type="checkbox"
+                                                    class="custom-control-input"
+                                                    id="customCheck1" />
+                                                <label class="custom-control-label" for="customCheck1">
+                                                    I have read and agreed to the terms of services and
 													privacy policy</label>
-                                            <asp:Button ID="RegisterForm" runat="server" Text="Button" OnClick="RegisterForm_Click" Enabled="True" Visible="False" />
+                                                <asp:Button ID="RegisterForm" runat="server" Text="Button" OnClick="RegisterForm_Click" Enabled="True" Visible="False" />
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </section>
                             </form>
                         </div>
                     </div>
@@ -243,7 +249,7 @@
         </div>
     </div>
     <!-- success Popup html Start -->
-    
+
     <button
         type="button"
         id="success-modal-btn"
@@ -284,9 +290,12 @@
     <script src="vendors/scripts/script.min.js"></script>
     <script src="vendors/scripts/process.js"></script>
     <script src="vendors/scripts/layout-settings.js"></script>
+   
+    <script src="src/plugins/jquery-steps/jquery.js"></script>
+    <script src="src/plugins/jquery-steps/jquery.validate.js"></script>
     <script src="src/plugins/jquery-steps/jquery.steps.js"></script>
     <script src="vendors/scripts/steps-setting.js"></script>
-   
+
     <script>
 
         $(document).ready(function () {
@@ -303,8 +312,8 @@
 
             //OTP enter animation
 
-            
-                // Handle keydown event on the input elements
+
+            // Handle keydown event on the input elements
             $('.inputs input').keydown(function (e) {
                 var keyCode = e.keyCode || e.which;
 
@@ -332,7 +341,8 @@
                     }
                 });
             });
-            function OTPValid() {
+
+            $("#OTPsubmit").click(function (e) {
                 var otp1 = $('#Otp1').val();
                 var otp2 = $('#Otp2').val();
                 var otp3 = $('#Otp3').val();
@@ -342,22 +352,23 @@
                 if (otp1 == "" || otp2 == "" || otp3 == "" || otp4 == "" || otp5 == "" || otp6 == "") {
                     AlertMessage('error', 'Enter the 6-digit OTP', true);
                     return false;
+                    e.preventDefault();
                 }
-            }
+            });
 
-            function Validation() {
-                var email = $('#Email').val();
-                var name = $('#UserName').val();
-                var password = $('#Password').val();
-                var password = $('#ConfirmPassword').val();
-                var otp = $('#Otp1').val() + $('#Otp2').val() + $('#Otp3').val() + $('#Otp4').val() + $('#Otp5').val() + $('#Otp6').val();
-                var photo=
-            }
+        //    function Validation() {
+        //        var email = $('#Email').val();
+        //        var name = $('#UserName').val();
+        //        var password = $('#Password').val();
+        //        var password = $('#ConfirmPassword').val();
+        //        var otp = $('#Otp1').val() + $('#Otp2').val() + $('#Otp3').val() + $('#Otp4').val() + $('#Otp5').val() + $('#Otp6').val();
+        //        var photo=
+        //    }
         });
 
 
-         
-            
+
+
     </script>
 
     <!-- Google Tag Manager (noscript) -->

@@ -45,7 +45,7 @@
 			href="vendors/styles/icon-font.min.css"
 		/>
 		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
-
+		<script src="vendors/scripts/toaster.js"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script
 			async
