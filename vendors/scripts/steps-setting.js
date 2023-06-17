@@ -107,8 +107,9 @@ form.validate({
         },
        "Email" : {
             required: function () {
-                toastr.error('email field is required');
-            }
+                AlertMessage('error', 'Enter the 6-digit OTP', true);
+           },
+           
         },
         //Otp1: {
         //    required: "Enter 6-digit OTP "
