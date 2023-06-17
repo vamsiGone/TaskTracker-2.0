@@ -59,31 +59,31 @@ form.validate({
             email: true
         },
 
-        Otp1: {
-            required: true,
-            minlength: 1
-        },
-        Otp2: {
-            required: true,
-            minlength: 1
-        },
-        Otp3: {
-            required: true,
-            minlength: 1
-        },
-        Otp4: {
-            required: true,
-            minlength: 1
-        },
-        Otp5: {
-            required: true,
-            minlength: 1
-        },
+        //Otp1: {
+        //    required: true,
+        //    minlength: 1
+        //},
+        //Otp2: {
+        //    required: true,
+        //    minlength: 1
+        //},
+        //Otp3: {
+        //    required: true,
+        //    minlength: 1
+        //},
+        //Otp4: {
+        //    required: true,
+        //    minlength: 1
+        //},
+        //Otp5: {
+        //    required: true,
+        //    minlength: 1
+        //},
 
-        Otp6: {
-            required: true,
-            minlength: 1
-        },
+        //Otp6: {
+        //    required: true,
+        //    minlength: 1
+        //},
         FileUpload1: {
             required: true
         },
@@ -105,8 +105,10 @@ form.validate({
             required: "Enter same as Password",
             minlength: "Minimum length is 8"
         },
-        Email: {
-            email: "Please enter a valid email address."
+       "Email" : {
+            required: function () {
+                toastr.error('email field is required');
+            }
         },
         //Otp1: {
         //    required: "Enter 6-digit OTP "

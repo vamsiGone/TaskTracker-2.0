@@ -55,7 +55,7 @@
     <!--js-->
     <script src="src/scripts/jquery.min.js"></script>
    
-    <script src="vendors/scripts/toaster.js"></script>
+   <%-- <script src="vendors/scripts/toaster.js"></script>--%>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
