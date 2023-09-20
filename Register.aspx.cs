@@ -29,16 +29,16 @@ namespace TaskTracker_2._0
                 string name, email, password, otp, photourl;
                 name = UserName.Text.Trim();
                 email = Email.Text.Trim();
-                password = Password.Text.Trim();               
+                password = Password.Text.Trim();
                 otp = Otp1.Text + Otp2.Text + Otp3.Text + Otp4.Text + Otp5.Text + Otp6.Text;
-                
-                
+
+
                 //Image upload code start
 
                 string ImagePath = Convert.ToString(ConfigurationManager.AppSettings["ImageUploadPath"]);
                 string DirPath = Server.MapPath(ImagePath);
                 photourl = Path.GetFileName(FileUpload1.PostedFile.FileName);
-               
+
                 //image upload code end
 
                 using (DataSet ds = objLoginBO.SaveRegister("Check", name, email, password, otp, photourl))
@@ -48,7 +48,7 @@ namespace TaskTracker_2._0
                         string Status = (ds.Tables[0].Rows[0]["com"].ToString());
                         if (Status == "0")
                         {
-                            using (DataSet dts = objLoginBO.SaveRegister("Insert", name, email, password,otp,photourl))
+                            using (DataSet dts = objLoginBO.SaveRegister("Insert", name, email, password, otp, photourl))
                             {
                                 if (dts != null && dts.Tables.Count > 0 && dts.Tables[0].Rows.Count > 0)
                                 {
@@ -70,7 +70,7 @@ namespace TaskTracker_2._0
                                     }
                                     else
                                     {
-                                       
+
                                         ScriptManager.RegisterStartupScript(this.Page, GetType(), "AlertMessage", "$(function(){AlertMessage('error','Something Wrong., Please try again.!')});", true);
                                         return;
                                     }
@@ -88,7 +88,7 @@ namespace TaskTracker_2._0
             }
             catch (Exception ex)
             {
-                
+
             }
         }
     }

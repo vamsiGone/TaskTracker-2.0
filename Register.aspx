@@ -2,85 +2,92 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-    <!-- Basic Page Info -->
-    <meta charset="utf-8" />
-    <title>Register</title>
+	<head>
+		<!-- Basic Page Info -->
+		<meta charset="utf-8" />
+		<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
 
-    <!-- Site favicon -->
-    <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="vendors/images/apple-touch-icon.png" />
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="vendors/images/favicon-32x32.png" />
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="vendors/images/favicon-16x16.png" />
+		<!-- Site favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="vendors/images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="vendors/images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="vendors/images/favicon-16x16.png"
+		/>
 
-    <!-- Mobile Specific Metas -->
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<!-- Mobile Specific Metas -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
 
-    <!-- Google Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="vendors/styles/icon-font.min.css" />
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="src/plugins/jquery-steps/jquery.steps.css" />
-    <link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
-     <script src="vendors/scripts/toaster.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"></script>
-    <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
-        crossorigin="anonymous"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="vendors/styles/icon-font.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="src/plugins/jquery-steps/jquery.steps.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
 
-        gtag("config", "G-GBZ3SGGX85");
-    </script>
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != "dataLayer" ? "&l=" + l : "";
-            j.async = true;
-            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
-    </script>
-    <!-- End Google Tag Manager -->
-</head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
+		></script>
+		<script
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+			crossorigin="anonymous"
+		></script>
+		<script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-<body class="login-page">
+            gtag("config", "G-GBZ3SGGX85");
+		</script>
+		<!-- Google Tag Manager -->
+		<script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+		</script>
+		<!-- End Google Tag Manager -->
+	</head>
 
-
-    <div class="login-header box-shadow">
+	<body class="login-page">
+	<div class="login-header box-shadow">
         <div
             class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand-logo">
@@ -283,103 +290,23 @@
             </div>
         </div>
     </div>
-    <!-- success Popup html End -->
-
-    <!-- js -->
-    <script src="vendors/scripts/core.js"></script>
-    <script src="vendors/scripts/script.min.js"></script>
-    <script src="vendors/scripts/process.js"></script>
-    <script src="vendors/scripts/layout-settings.js"></script>
-   <script src="src/plugins/toastr/toastr.min.js"></script>
-    <script src="src/plugins/jquery-steps/jquery.js"></script>
-    <script src="src/plugins/jquery-steps/jquery.validate.js"></script>
-    <script src="src/plugins/jquery-steps/jquery.steps.js"></script>
-    <script src="vendors/scripts/steps-setting.js"></script>
-    
-
-    <script>
-
-        $(document).ready(function () {
-
-            $("#<%= FileUpload1.ClientID%>").change(function () {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $("#<%= PreviewImage.ClientID%>").fadeIn("slow", function () {
-                        $(this).attr("src", e.target.result).fadeIn();
-                    })
-                }
-                reader.readAsDataURL($(this)[0].files[0]);
-            });
-
-            //OTP enter animation
-
-
-            // Handle keydown event on the input elements
-            $('.inputs input').keydown(function (e) {
-                var keyCode = e.keyCode || e.which;
-
-                if (keyCode === 8 && !$(this).val()) {
-                    // If backspace is pressed and input value is empty
-                    var prevInput = $(this).prev('input');
-                    prevInput.focus();
-                } else if ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 96 && keyCode <= 105)) {
-                    // If a number key is pressed
-                    var maxLength = 1;
-                    if ($(this).val().length === maxLength) {
-                        // If input value reaches its maximum length
-                        var nextInput = $(this).next('input');
-                        nextInput.focus();
-                    }
-                }
-                $('.inputs input').keyup(function (e) {
-                    if (keyCode === 8 && !$(this).val()) {
-                        // If backspace is pressed and input value is empty
-                        var prevInput = $(this).prev('input');
-                        prevInput.focus();
-                    } else {
-                        var nextInput = $(this).next('input');
-                        nextInput.focus();
-                    }
-                });
-            });
-
-            $("#OTPsubmit").click(function (e) {
-                var otp1 = $('#Otp1').val();
-                var otp2 = $('#Otp2').val();
-                var otp3 = $('#Otp3').val();
-                var otp4 = $('#Otp4').val();
-                var otp5 = $('#Otp5').val();
-                var otp6 = $('#Otp6').val();
-                if (otp1 == "" || otp2 == "" || otp3 == "" || otp4 == "" || otp5 == "" || otp6 == "") {
-                    AlertMessage('error', 'Enter the 6-digit OTP', true);
-                    return false;
-                    e.preventDefault();
-                }
-            });
-
-        //    function Validation() {
-        //        var email = $('#Email').val();
-        //        var name = $('#UserName').val();
-        //        var password = $('#Password').val();
-        //        var password = $('#ConfirmPassword').val();
-        //        var otp = $('#Otp1').val() + $('#Otp2').val() + $('#Otp3').val() + $('#Otp4').val() + $('#Otp5').val() + $('#Otp6').val();
-        //        var photo=
-        //    }
-        });
-
-
-
-
-    </script>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
-            height="0"
-            width="0"
-            style="display: none; visibility: hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-</body>
+		<!-- js -->
+		<script src="vendors/scripts/core.js"></script>
+		<script src="vendors/scripts/script.min.js"></script>
+		<script src="vendors/scripts/process.js"></script>
+		<script src="vendors/scripts/layout-settings.js"></script>
+		<script src="src/plugins/jquery-steps/jquery.steps.js"></script>
+		<script src="vendors/scripts/steps-setting.js"></script>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	</body>
 </html>
+
