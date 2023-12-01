@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="TaskTracker_2._0.Register" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="TaskTracker_2._0.Register" %>
 
 <!DOCTYPE html>
 <html>
 	<head>
 		<!-- Basic Page Info -->
 		<meta charset="utf-8" />
-		<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+		<title>Register</title>
 
 		<!-- Site favicon -->
 		<link
@@ -50,40 +50,8 @@
 			href="src/plugins/jquery-steps/jquery.steps.css"
 		/>
 		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+        
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
-		></script>
-		<script
-			async
-			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
-			crossorigin="anonymous"
-		></script>
-		<script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-
-            gtag("config", "G-GBZ3SGGX85");
-		</script>
-		<!-- Google Tag Manager -->
-		<script>
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s),
-                    dl = l != "dataLayer" ? "&l=" + l : "";
-                j.async = true;
-                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
-		</script>
-		<!-- End Google Tag Manager -->
 	</head>
 
 	<body class="login-page">
@@ -120,14 +88,13 @@
                                                     Email Address*</label>
                                                 <div class="col-sm-8">
                                                     <asp:TextBox ID="Email" TextMode="Email" class="form-control" runat="server"></asp:TextBox>
-                                                    <%--<input type="email" class="form-control" />--%>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="col-sm-4 col-form-label">Username*</label>
                                                 <div class="col-sm-8">
                                                     <asp:TextBox ID="UserName" class="form-control" runat="server"></asp:TextBox>
-                                                    <%--<input type="text" class="form-control" />--%>
+                                                   
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -167,14 +134,16 @@
                                                             <asp:TextBox ID="Otp6" class="m-2 text-center form-control rounded" runat="server" MaxLength="1" placeholder="*"></asp:TextBox>
                                                         </div>
                                                         <div class="mt-4">
-                                                            <asp:Button ID="OTPsubmit" class="btn btn-success px-4 validate" runat="server" Text="Verify OTP"/>
+                                                            
+                                                            <asp:Button ID="SendOtp" class="btn btn-success px-3 validate" runat="server" OnClick="SendOtp_Click" Visible="false" Text="Send Otp"/>
+                                                            <asp:Button ID="OTPsubmit" class="btn btn-success px-4 validate" runat="server" Text="Verify OTP" OnClick="OTPsubmit_Click" />
                                                         </div>
                                                     </div>
                                                     <div class="card-2">
                                                         <br />
                                                         <div class="content d-flex justify-content-between align-items-center">
                                                             <span>Didn't get the code?</span>
-                                                            <asp:Button ID="ResendOTP" class="btn btn-danger px-3 validate" runat="server" Text="Resend OTP" />
+                                                            <asp:Button ID="ResendOTP" class="btn btn-danger px-3 validate" runat="server" Text="Resend OTP" OnClick="ResendOTP_Click" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -244,7 +213,7 @@
                                                 <label class="custom-control-label" for="customCheck1">
                                                     I have read and agreed to the terms of services and
 													privacy policy</label>
-                                                <asp:Button ID="RegisterForm" runat="server" Text="Button" OnClick="RegisterForm_Click" Enabled="True" Visible="False" />
+                                                <asp:Button ID="RegisterForm" runat="server" Text="Register" OnClick="RegisterForm_Click" Enabled="True" Visible="False" />
                                             </div>
                                         </div>
                                     </section>
@@ -295,18 +264,24 @@
 		<script src="vendors/scripts/script.min.js"></script>
 		<script src="vendors/scripts/process.js"></script>
 		<script src="vendors/scripts/layout-settings.js"></script>
-		<script src="src/plugins/jquery-steps/jquery.steps.js"></script>
+       <%-- <script src="src/scripts/jquery.min.js"></script>--%>
+		<script src="src/plugins/jquery-steps/jquery.steps.js"></script>      
+		<script src="src/plugins/jQuery-Validation/jquery-validation.min.js"></script>
 		<script src="vendors/scripts/steps-setting.js"></script>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden"
-			></iframe
-		></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+        <script>
+            $(document).ready(function () {
+
+                $("#<%= FileUpload1.ClientID%>").change(function () {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#<%= PreviewImage.ClientID%>").fadeIn("slow", function () {
+                            $(this).attr("src", e.target.result).fadeIn();
+                        })
+                    }
+                    reader.readAsDataURL($(this)[0].files[0]);
+                });
+            });
+        </script>
 	</body>
 </html>
 
