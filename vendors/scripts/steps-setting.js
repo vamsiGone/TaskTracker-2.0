@@ -1,38 +1,4 @@
-$(".tab-wizard").steps({
-	headerTag: "h5",
-	bodyTag: "section",
-	transitionEffect: "fade",
-	titleTemplate: '<span class="step">#index#</span> #title#',
-	labels: {
-		finish: "Submit"
-	},
-	onStepChanged: function (event, currentIndex, priorIndex) {
-		$('.steps .current').prevAll().addClass('disabled');
-	},
-	onFinished: function (event, currentIndex) {
-		$('#success-modal').modal('show');
-	}
-});
 
-//$(".tab-wizard2").steps({
-//	headerTag: "h5",
-//	bodyTag: "section",
-//	transitionEffect: "fade",
-//	titleTemplate: '<span class="step">#index#</span> <span class="info">#title#</span>',
-//	loadingTemplate: '<span class="spinner"></span> #text#',
-//	labels: {
-//		finish: "Submit",
-//		next: "Next",
-//		previous: "Previous",
-//		loading: "Loading ..."
-//	},
-//	onStepChanged: function(event, currentIndex, priorIndex) {
-//		$('.steps .current').prevAll().addClass('disabled');
-//	},
-//	onFinished: function(event, currentIndex) {
-//		$('#success-modal-btn').trigger('click');
-//	}
-//});
 
 var form = $(".tab-wizard2");
 form.validate({
@@ -46,44 +12,18 @@ form.validate({
         },
         Password: {
             required: true,
-            minlength: 8
+            minlength: 3
 
         },
         ConfirmPassword: {
             required: true,
-            minlength: 8,
+            minlength: 3,
             equalTo: "#Password"
         },
         Email: {
             required: true,
             email: true
         },
-
-        //Otp1: {
-        //    required: true,
-        //    minlength: 1
-        //},
-        //Otp2: {
-        //    required: true,
-        //    minlength: 1
-        //},
-        //Otp3: {
-        //    required: true,
-        //    minlength: 1
-        //},
-        //Otp4: {
-        //    required: true,
-        //    minlength: 1
-        //},
-        //Otp5: {
-        //    required: true,
-        //    minlength: 1
-        //},
-
-        //Otp6: {
-        //    required: true,
-        //    minlength: 1
-        //},
         FileUpload1: {
             required: true
         },
@@ -108,28 +48,9 @@ form.validate({
        "Email" : {
             required: function () {
                 AlertMessage('error', 'Enter the 6-digit OTP', true);
-           },
+           }
            
         },
-        //Otp1: {
-        //    required: "Enter 6-digit OTP "
-        //},
-        //Otp2: {
-        //    required: "Enter 6-digit OTP "
-        //},
-        //Otp3: {
-        //    required: "Enter 6-digit OTP "
-        //},
-        //Otp4: {
-        //    required: "Enter 6-digit OTP "
-        //},
-        //Otp5: {
-        //    required: "Enter 6-digit OTP "
-        //},
-        //Otp6: {
-        //    required: "Enter 6-digit OTP "
-        //},
-
         FileUpload1: {
             required: "Upload the Profile Picture",
 
@@ -146,7 +67,7 @@ form.steps({
     transitionEffect: "fade",
     titleTemplate: '<span class="step">#index#</span> <span class="info">#title#</span>',
     labels: {
-        finish: "Submit",
+        finish: "Register",
         next: "Next",
         previous: "Previous",
     },
@@ -154,11 +75,22 @@ form.steps({
         form.validate().settings.ignore = ":disabled,:hidden";
         return form.valid();
     },
+    onStepChanged: function (event, currentIndex, priorIndex) {
+        // Check if the current step is the second step (index starts from 0)
+        if (currentIndex === 1) {
+            // Trigger a click event for the button in the second step
+            $('#SendOtp').trigger('click');
+        }
+    },
     onFinishing: function (event, currentIndex) {
         form.validate().settings.ignore = ":disabled";
         return form.valid();
     },
     onFinished: function (event, currentIndex) {
-        $('#success-modal-btn').trigger('click');
+        form.validate().settings.ignore = ":disabled";
+        if (form.valid()) {
+            $('#success-modal-btn').trigger('click');
+            S('#RegisterForm').trigger('click');
+        }
     }
 });
